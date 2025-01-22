@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/CLHome"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.example.green_plaza.PlazaHomeFragment">
+
+    <Button
+        android:id="@+id/BSelling"
+        android:layout_width="330dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="464dp"
+        android:backgroundTint="#E9F0E0"
+        android:fontFamily="@font/katibeh"
+        android:text="Selling    "
+        android:textAlignment="viewEnd"
+        android:textColor="@color/black"
+        android:textSize="36sp"
+        app:cornerRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/BPurchase"
+        android:layout_width="330dp"
+        android:layout_height="140dp"
+        android:layout_marginTop="40dp"
+        android:backgroundTint="#3B653B"
+        android:fontFamily="@font/katibeh"
+        android:text="Purchase "
+        android:textAlignment="viewEnd"
+        android:textColor="#FFFFFF"
+        android:textSize="36sp"
+        app:cornerRadius="32dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CLHomeHeader" />
+
+    <ImageView
+        android:id="@+id/IVPurchaseIcon"
+        android:layout_width="100dp"
+        android:layout_height="99.06dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginBottom="25dp"
+        android:elevation="5dp"
+        android:src="@drawable/home_purchaseico"
+        app:layout_constraintBottom_toBottomOf="@+id/BPurchase"
+        app:layout_constraintStart_toStartOf="@+id/BPurchase" />
+
+    <ImageView
+        android:id="@+id/IVPurchaseIcon2"
+        android:layout_width="100dp"
+        android:layout_height="99.06dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/home_sellingicon"
+        android:elevation="5dp"
+        app:layout_constraintStart_toStartOf="@+id/BSelling"
+        app:layout_constraintTop_toTopOf="@+id/BSelling" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CLHomeHeader"
+        android:layout_width="412dp"
+        android:layout_height="254dp"
+        android:background="@drawable/home_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageButton
+            android:id="@+id/BtnBack2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/button_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_icon" />
+
+        <ImageView
+            android:id="@+id/IVHomeLeftHand"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:src="@drawable/home_righthand1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TVPlazaHomeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="120dp"
+            android:fontFamily="@font/katibeh"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="10"
+            android:shadowRadius="2"
+            android:text="Green Plaza"
+            android:textColor="#FFFFFF"
+            android:textSize="56sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SearchView
+            android:id="@+id/SVBrowseItem"
+            android:layout_width="296dp"
+            android:layout_height="37dp"
+            android:layout_marginTop="196dp"
+            android:background="@drawable/search_bar_background"
+            android:queryHint="Search"
+            app:iconifiedByDefault="false"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/IVHomeRightHand"
+            android:layout_width="144dp"
+            android:layout_height="150dp"
+            android:layout_marginBottom="8dp"
+            android:src="@drawable/home_lefthand1"
+            app:layout_constraintBottom_toBottomOf="@+id/SVBrowseItem"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

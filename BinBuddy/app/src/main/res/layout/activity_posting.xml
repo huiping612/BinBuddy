@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/IVElipse1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/IVElipse3"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ellipse1" />
+
+    <ImageView
+        android:id="@+id/IVElipse2"
+        android:layout_width="413dp"
+        android:layout_height="230dp"
+        app:layout_constraintBottom_toBottomOf="@+id/IVElipse1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ellipse2" />
+
+    <ImageView
+        android:id="@+id/IVElipse3"
+        android:layout_width="425dp"
+        android:layout_height="121dp"
+        android:layout_marginTop="-5dp"
+        android:layout_marginBottom="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/IVElipse1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/elipse3" />
+
+    <ImageButton
+        android:id="@+id/BtnBack2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="56dp"
+        android:background="@drawable/button_background"
+        app:layout_constraintStart_toStartOf="@+id/IVElipse2"
+        app:layout_constraintTop_toTopOf="@+id/IVElipse3"
+        app:srcCompat="@drawable/back_icon" />
+
+    <TextView
+        android:id="@+id/TVPostingPage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="92dp"
+        android:text="Add Your Ideas"
+        android:textColor="#FFFFFF"
+        android:textSize="33sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/ETTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/IVElipse3"
+        app:layout_constraintVertical_bias="0.613" />
+
+    <EditText
+        android:id="@+id/ETTitle"
+        android:layout_width="350dp"
+        android:layout_height="57dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/posting_title_box"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="text"
+        android:paddingLeft="16dp"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IVElipse2" />
+
+    <EditText
+        android:id="@+id/ETContent"
+        android:layout_width="350dp"
+        android:layout_height="330dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="33dp"
+        android:background="@drawable/posting_content_box"
+        android:ems="10"
+        android:gravity="start"
+        android:hint="Tell people what you have to say"
+        android:inputType="text"
+        android:paddingLeft="16dp"
+        android:paddingTop="13dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETTitle" />
+
+    <ImageView
+        android:id="@+id/IVPhotoBox"
+        android:layout_width="351dp"
+        android:layout_height="58dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ETContent"
+        app:srcCompat="@drawable/posting_add_photo_box" />
+
+    <ImageView
+        android:id="@+id/IVIcon"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="188dp"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/IVPhotoBox"
+        app:srcCompat="@drawable/posting_add_icon" />
+
+    <TextView
+        android:id="@+id/TVUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="148dp"
+        android:layout_marginTop="5dp"
+        android:fontFamily="@font/inter_medium"
+        android:text="UPLOAD PHOTO"
+        android:textColor="#66000000"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/IVIcon" />
+
+    <Button
+        android:id="@+id/BtnSubmit"
+        android:layout_width="119dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="144dp"
+        android:layout_marginEnd="148dp"
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="#445E44"
+        android:text="Submit"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

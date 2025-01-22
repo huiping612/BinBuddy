@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.green_plaza.CheckOutFragment">
+
+    <!-- Title TextView -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="410dp"
+        android:layout_height="220dp"
+        android:padding="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/headerContainer"
+            android:layout_width="405dp"
+            android:layout_height="208dp"
+            android:background="@drawable/upper_container_background"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageButton
+                android:id="@+id/BtnBack"
+                android:layout_width="47dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/button_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back_icon" />
+
+            <TextView
+                android:id="@+id/titleText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="108dp"
+                android:text="Checkout"
+                android:textColor="#FFFFFF"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/plantIcon"
+                android:layout_width="137dp"
+                android:layout_height="173dp"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="28dp"
+                android:contentDescription="Recycling Bag"
+                android:src="@drawable/recycle_bag"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <!-- Payment Method EditText -->
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="340dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:hint="Full Name"
+        android:inputType="textPersonName"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout" />
+
+    <TextView
+        android:id="@+id/fullNameText"
+        android:layout_width="337dp"
+        android:layout_height="25dp"
+        android:hint="Anonymous"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.351"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+    <TextView
+        android:id="@+id/addressText"
+        android:layout_width="340dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="12dp"
+        android:hint="Address"
+        android:inputType="textPersonName"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullNameText" />
+
+    <TextView
+        android:id="@+id/productList"
+        android:layout_width="340dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="16dp"
+        android:hint="Product List"
+        android:inputType="textPersonName"
+
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.361"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullAddressText" />
+
+    <TextView
+        android:id="@+id/fullAddressText"
+        android:layout_width="335dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="25dp"
+        android:hint="Home Address"
+        android:inputType="textPersonName"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/addressText" />
+
+    <!-- Product IamgeView -->
+
+    <ImageView
+        android:id="@+id/productImage"
+        android:layout_width="89dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/clothes"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productList" />
+
+    <TextView
+        android:id="@+id/productName"
+        android:layout_width="226dp"
+        android:layout_height="38dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="12dp"
+        android:hint="Product 1"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/productImage"
+        app:layout_constraintTop_toBottomOf="@+id/productList" />
+
+    <TextView
+        android:id="@+id/itemPrice"
+        android:layout_width="81dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:hint="0.00"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintStart_toEndOf="@+id/priceTag"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+
+    <!-- Submit Button -->
+
+    <TextView
+        android:id="@+id/priceTag"
+        android:layout_width="59dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="128dp"
+        android:layout_marginTop="32dp"
+        android:hint="    RM"
+        android:padding="5dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/productImage"
+        app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+    <TextView
+        android:id="@+id/voucherPrice"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="24dp"
+        android:hint="0.00"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textSize="18sp"
+        android:textAlignment="viewEnd"
+        app:layout_constraintStart_toEndOf="@+id/voucherPriceTag"
+        app:layout_constraintTop_toBottomOf="@+id/itemPrice" />
+
+    <TextView
+        android:id="@+id/voucher"
+        android:layout_width="163dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="32dp"
+        android:hint="Voucher"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+    <Button
+        android:id="@+id/addVoucher"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="132dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="#445E44"
+        android:text="Add"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/productImage" />
+
+    <TextView
+        android:id="@+id/voucherPriceTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="24dp"
+        android:hint="-  RM"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/voucher"
+        app:layout_constraintTop_toBottomOf="@+id/priceTag" />
+
+    <TextView
+        android:id="@+id/totalAmountText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Total:"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.643"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/voucherPriceTag" />
+
+    <TextView
+        android:id="@+id/totalAmount"
+        android:layout_width="80dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="28dp"
+        android:hint="0.00"
+        android:inputType="textPersonName"
+        android:padding="5dp"
+        android:textAlignment="viewEnd"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/totalAmountText"
+        app:layout_constraintTop_toBottomOf="@+id/voucherPrice" />
+
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="233dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/rounded_bottom_sheet"
+        android:backgroundTint="@color/lightGreen"
+        android:padding="5dp"
+        android:text="Purchase"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/totalAmountText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

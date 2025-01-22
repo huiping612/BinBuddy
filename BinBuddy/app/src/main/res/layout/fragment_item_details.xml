@@ -1,0 +1,140 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.green_plaza.ItemDetailsFragment">
+
+    <!-- Fragment for browsing item content -->
+    <FrameLayout
+        android:id="@+id/main_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <!-- Replace with the actual fragment for browsing item -->
+    <fragment
+        android:id="@+id/fragment_browsing_item"
+        android:name="com.example.green_plaza.BrowsingItemFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_browsing_item" />
+</FrameLayout>
+
+    <!-- Bottom Sheet FrameLayout -->
+    <FrameLayout
+        android:id="@+id/bottom_sheet"
+        android:layout_width="match_parent"
+        android:layout_height="1061dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/rounded_bottom_sheet"
+        app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior">
+
+
+        <!-- Scrollable Content -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="956dp"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Item Image -->
+                <ImageView
+                    android:id="@+id/item_image"
+                    android:layout_width="match_parent"
+                    android:layout_height="281dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/placeholder_image" />
+
+
+                <!-- Price -->
+                <TextView
+                    android:id="@+id/item_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/khula_light"
+                    android:text="RM XX.XX"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <!-- Item Name -->
+                <TextView
+                    android:id="@+id/item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/khula_light"
+                    android:text="Product Name: Vintage Jacket" />
+
+
+
+                <!-- Item Location -->
+                <TextView
+                    android:id="@+id/item_location"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/khula_light"
+                    android:text="Location: University of Malaya" />
+
+                <!-- Item Description -->
+                <TextView
+                    android:id="@+id/item_description"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="12dp"
+                    android:layout_marginRight="20dp"
+                    android:fontFamily="@font/khula_light"
+                    android:text="Product: A beautiful vintage jacket perfect for winter." />
+
+                <!-- Buttons -->
+
+                <Button
+                    android:id="@+id/BtnBuyNow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="60dp"
+                    android:backgroundTint="#445E44"
+                    android:text="Buy Now"
+                    android:textColor="@color/lightGreen"
+                    android:textColorHint="@color/lightGreen"
+                    android:textColorLink="@color/lightGreen" />
+
+                <Button
+                    android:id="@+id/BtnViewCmt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="60dp"
+                    android:backgroundTint="#1A2D1A"
+                    android:text="View Comment"
+                    android:textColor="@color/white" />
+
+                <FrameLayout
+                    android:id="@+id/content_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>

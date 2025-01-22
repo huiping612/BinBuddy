@@ -1,0 +1,57 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="com.android.vending.CHECK_LICENSE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+    <meta-data
+        android:name="com.google.android.gms.ads.APPLICATION_ID" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BinBuddy"
+        android:enableOnBackInvokedCallback="true"
+        tools:targetApi="31">
+
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyCteV6UOiRBQPo5JDp6buEw0tJsh7DD2TA" />
+
+        <!-- Main Activity -->
+        <activity android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.blog.ViewingActivity"></activity>
+        <activity android:name="com.example.blog.PostingActivity"></activity>
+        <activity android:name="com.example.blog.ArticleDetailsActivity"></activity>
+        <activity android:name="com.example.quiz.QuizPage" />
+        <activity android:name="com.example.quiz.Library" />
+        <activity android:name="com.example.quiz.Leaderboard" />
+        <activity android:name="com.example.quiz.Question" />
+        <activity android:name="com.example.quiz.QuestionListActivity" />
+        <activity android:name="com.example.quiz.ReviewMistakes" />
+    </application>
+
+</manifest>

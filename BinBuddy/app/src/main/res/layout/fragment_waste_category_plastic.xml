@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#445E44">
+
+    <!-- Back Button -->
+
+    <!-- Image Section -->
+    <ImageButton
+        android:id="@+id/BtnBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/button_background"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon" />
+
+    <!-- CardView with Scrollable Text -->
+
+    <ImageView
+        android:id="@+id/recycle_image"
+        android:layout_width="185dp"
+        android:layout_height="173dp"
+        android:layout_marginTop="64dp"
+        android:contentDescription="Recycling box"
+        android:src="@drawable/plastic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="16dp"
+        app:cardCornerRadius="16dp"
+        app:layout_constraintTop_toBottomOf="@id/recycle_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <!-- Decorative Line -->
+                <View
+                    android:layout_width="48dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="8dp"
+                    android:background="#D9D9D9" />
+
+                <!-- Title -->
+                <TextView
+                    android:id="@+id/title_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="How to Recycle Plastic"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="8dp" />
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/description_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="4dp"
+                    android:text="1. Understand recyclable and non-recyclable plastic. Recyclable plastics often include items like water bottles, food containers, detergent bottles, and other packaging marked with recycling codes (typically #1, #2, or #5). Non-recyclable plastics may include plastic bags, wrappers, straws, and items labeled with codes #3, #6, or #7, which are often harder to process.
+                                \n\n2. Clean the plastic. Before recycling, rinse off any food residue, grease, or liquids. Contaminants can interfere with the recycling process and potentially spoil an entire batch of recyclables.
+                                \n\n3. Sort plastics by type. Different plastics have different properties and must be processed separately. Look for the recycling code stamped on the item, usually inside a triangle of arrows. Separate plastics based on their number or type if required by your local recycling program.
+                                \n\n4. Remove non-plastic parts. Take off caps, lids, or other non-plastic components. Some caps may be recyclable but often need to be separated from the bottles to ensure proper recycling.
+                                \n\n5. Avoid mixing other materials. Items that are a combination of plastic and other materials, such as plastic-coated paper or multi-layered packaging, are generally not recyclable. Check with your local recycling guidelines for specifics.
+                                \n\n6. Prepare the plastic for recycling. Crush or flatten bottles and containers to save space. Ensure they are dry before placing them in your recycling bin.
+                                \n\n7. Take the plastic to a recycling center. Drop off your sorted plastic at the nearest recycling center or place it in your designated curbside recycling bin if your area provides that service.
+                                \n\n8. Explore alternatives for non-recyclable plastics. Consider reusing non-recyclable plastics for creative projects or seek specialized recycling programs that may accept them. For example, some stores have bins specifically for plastic bags or wrap recycling."
+                    android:textColor="@color/black"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+        </ScrollView>
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

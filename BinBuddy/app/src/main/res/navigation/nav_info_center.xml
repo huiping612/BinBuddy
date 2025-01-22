@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/DestLogin">
+
+    <!-- Login Fragment -->
+    <fragment
+        android:id="@+id/DestLogin"
+        android:name="com.example.greenguide.LoginFragment"
+        android:label="LoginFragment" />
+
+        <action
+            android:id="@+id/action_DestLogin_to_DestHomeInfoCenter"
+            app:destination="@id/DestHomeInfoCenter" />
+
+        <action
+            android:id="@+id/action_DestLogin_to_DestRegister"
+            app:destination="@id/DestRegister" />
+
+    <!-- Register Fragment -->
+    <fragment
+        android:id="@+id/DestRegister"
+        android:name="com.example.greenguide.RegisterFragment"
+        android:label="RegisterFragment" />
+
+        <action
+            android:id="@+id/action_DestRegister_to_DestHomeInfoCenter"
+            app:destination="@id/DestHomeInfoCenter" />
+
+    <!-- Home Fragment -->
+    <fragment
+        android:id="@+id/DestHomeInfoCenter"
+        android:name="com.example.greenplaza.greenGuide.InfoCenter_HomeFragment"
+        android:label="InfoCenter_HomeFragment">
+        <!-- Action to Search Product Fragment -->
+        <action
+            android:id="@+id/action_DestHomeInfoCenter_to_DestSearchProduct"
+            app:destination="@id/DestSearchProduct" />
+        <!-- Action to Recycling Tips Fragment (if needed in the future) -->
+        <action
+            android:id="@+id/action_DestHomeInfoCenter_to_DestRecyclingTips"
+            app:destination="@id/DestRecyclingTips" />
+
+        <action
+            android:id="@+id/action_DestHomeInfoCenter_to_DestNearbyRecycling"
+            app:destination="@id/DestNearbyRecycling" />
+    </fragment>
+
+    <!-- Search Product Fragment -->
+    <fragment
+        android:id="@+id/DestSearchProduct"
+        android:name="com.example.greenguide.SearchProductFragment"
+        android:label="SearchProductFragment" />
+
+        <action
+            android:id="@+id/action_DestSearchProduct_to_DestHomeInfoCenter"
+            app:destination="@id/DestHomeInfoCenter" />
+        <action
+            android:id="@+id/action_DestSearchProduct_to_DestPopUpCategory"
+            app:destination="@id/DestPopUpCategory" />
+        <action
+            android:id="@+id/action_DestSearchProduct_to_DestCategoryItem"
+            app:destination="@id/DestCategoryItem" />
+
+
+
+    <!-- Category Item fragment -->
+    <fragment
+        android:id="@+id/DestCategoryItem"
+        android:name="com.example.greenguide.CategoryItemFragment"
+        android:label="CategoryItemFragment" />
+
+        <action
+            android:id="@+id/action_DestCategoryItem_to_DestSearchProduct"
+            app:destination="@id/DestSearchProduct" />
+
+        <action
+            android:id="@+id/action_DestCategoryItem_to_DestNearbyRecycling"
+            app:destination="@id/DestNearbyRecycling" />
+
+
+    <!-- Nearby Recycling -->
+    <fragment
+        android:id="@+id/DestNearbyRecycling"
+        android:name="com.example.greenguide.NearbyRecyclingFragment"
+        android:label="NearbyRecyclingFragment" />
+
+        <action
+            android:id="@+id/action_DestNearbyRecycling_to_DestHomeInfoCenter"
+            app:destination="@id/DestHomeInfoCenter" />
+
+
+    <!-- Pop Up fragment -->
+    <fragment
+        android:id="@+id/DestPopUpCategory"
+        android:name="com.example.greenguide.PopUpCategoryFragment"
+        android:label="PopUpCategoryFragment" />
+
+        <action
+            android:id="@+id/action_DestPopUpCategory_to_DestNearbyRecycling"
+            app:destination="@id/DestNearbyRecycling" />
+
+
+    <!-- Recycling Tips Fragment -->
+    <fragment
+        android:id="@+id/DestRecyclingTips"
+        android:name="com.example.greenguide.RecyclingTipsFragment"
+        android:label="RecyclingTipsFragment" />
+
+        <action
+            android:id="@+id/action_DestRecyclingTips_to_DestHomeInfoCenter"
+            app:destination="@id/DestHomeInfoCenter" />
+
+        <action
+            android:id="@+id/action_DestRecyclingTips_to_DestWasteCategoryPaper"
+            app:destination="@id/DestWasteCategoryPaper" />
+
+        <action
+            android:id="@+id/action_DestRecyclingTips_to_DestWasteCategoryGlass"
+            app:destination="@id/DestWasteCategoryGlass" />
+
+        <action
+            android:id="@+id/action_DestRecyclingTips_to_DestWasteCategoryPlastic"
+            app:destination="@id/DestWasteCategoryPlastic" />
+
+    <!-- Paper Waste Categories Fragment -->
+    <fragment
+        android:id="@+id/DestWasteCategoryPaper"
+        android:name="com.example.greenguide.WasteCategoryPaperFragment"
+        android:label="WasteCategoryPaperFragment" />
+
+        <action
+            android:id="@+id/action_DestWasteCategoryPaper_to_DestRecyclingTips"
+            app:destination="@id/DestRecyclingTips"/>
+
+    <!-- Glass Waste Categories Fragment -->
+    <fragment
+        android:id="@+id/DestWasteCategoryGlass"
+        android:name="com.example.greenguide.WasteCategoryGlassFragment"
+        android:label="WasteCategoryGlassFragment" />
+
+    <action
+        android:id="@+id/action_DestWasteCategoryGlass_to_DestRecyclingTips"
+        app:destination="@id/DestRecyclingTips"/>
+
+    <!-- Plastic Waste Categories Fragment -->
+    <fragment
+        android:id="@+id/DestWasteCategoryPlastic"
+        android:name="com.example.greenguide.WasteCategoryPlasticFragment"
+        android:label="WasteCategoryPlasticFragment" />
+
+    <action
+        android:id="@+id/action_DestWasteCategoryPlastic_to_DestRecyclingTips"
+        app:destination="@id/DestRecyclingTips"/>
+
+
+</navigation>

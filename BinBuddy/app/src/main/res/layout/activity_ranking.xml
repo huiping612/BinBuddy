@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="#F5F5F5">
+
+    <!-- Ranking (left side) -->
+    <TextView
+        android:id="@+id/tvRanking"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Rank"
+        android:textSize="16sp"
+        android:layout_marginEnd="8dp" />
+
+    <!-- User photo (middle-left) -->
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/ivUserPhoto"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center_vertical"
+        android:scaleType="centerCrop"
+        android:src="@drawable/cat"
+        android:layout_marginEnd="8dp" />
+
+
+    <!-- Username (middle-right) -->
+    <TextView
+        android:id="@+id/tvUsername"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:text="Username"
+        android:textSize="16sp" />
+
+    <!-- Score (right side) -->
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end|center_vertical"
+        android:text="Score"
+        android:textSize="16sp" />
+</LinearLayout>

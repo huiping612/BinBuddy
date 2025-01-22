@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/IVProfile1"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/comment_pic_1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/CircularImageViewStyle"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/TVUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/inter_semibold"
+        android:text="xinyi0090"
+        android:textColor="#445E44"
+        android:textSize="13sp"
+        app:layout_constraintStart_toEndOf="@+id/IVProfile1"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/TVComment"
+        android:layout_width="342dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/roboto"
+        android:text="Recycling isn’t just about waste—it’s about creating a better future! 🌎 By recycling, we help conserve natural resources and reduce pollution."
+        android:textSize="12sp"
+        app:layout_constraintStart_toEndOf="@id/IVProfile1"
+        app:layout_constraintTop_toBottomOf="@id/TVUser" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

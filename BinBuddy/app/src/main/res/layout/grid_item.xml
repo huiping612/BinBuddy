@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/grid_item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/search_bar_background"
+    android:padding="8dp">
+
+    <!-- Item Image -->
+    <ImageView
+        android:id="@+id/itemImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/placeholder_image"
+        android:scaleType="centerCrop" />
+
+    <!-- Item Name -->
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemImage"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="8dp"
+        android:text="Item Name"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textColor="#000000" />
+
+    <!-- Item Price -->
+    <TextView
+        android:id="@+id/itemPrice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/itemName"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="4dp"
+        android:text="Price"
+        android:textAlignment="center"
+        android:textSize="14sp"
+        android:textColor="#FF5722" />
+</RelativeLayout>

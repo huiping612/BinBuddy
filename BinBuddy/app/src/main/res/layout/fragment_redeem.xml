@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout3"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context="com.example.point_collection.RedeemFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerContainer"
+        android:layout_width="413dp"
+        android:layout_height="225dp"
+        android:background="@drawable/upper_container_background"
+        android:padding="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/BtnBack"
+            android:layout_width="47dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/button_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="160dp"
+            android:layout_height="68dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="73dp"
+            android:text="Redeem Voucher"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/header_subtitle"
+            android:layout_width="329dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="5dp"
+            android:text="Collect so many points already ?  It’s the time for you to redeem your cash voucher !!!"
+            android:textColor="#FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.322"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/header_title" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="259dp"
+            android:layout_height="113dp"
+            android:layout_marginStart="164dp"
+            android:layout_marginTop="28dp"
+            android:rotation="90"
+            android:src="@drawable/ic_voucher"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/currentPointsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:text="Current Points"
+        android:textColor="#599659"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerContainer" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pointBox"
+        android:layout_width="308dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="20dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/currentPointsText">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pointContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/rankingPlace"
+                android:layout_width="230dp"
+                android:layout_height="93dp"
+                android:layout_marginEnd="36dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pointNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="16dp"
+                android:shadowColor="#8C050505"
+                android:shadowDx="1"
+                android:shadowDy="4"
+                android:shadowRadius="3"
+                android:text="1000"
+                android:textColor="#445E44"
+                android:textSize="30sp"
+                app:layout_constraintStart_toStartOf="@+id/rankingPlace"
+                app:layout_constraintTop_toTopOf="@+id/rankingPlace" />
+
+            <TextView
+                android:id="@+id/pointText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="8dp"
+                android:text="Points"
+                android:textAlignment="center"
+                android:textColor="#599659"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/rankingPlace"
+                app:layout_constraintTop_toBottomOf="@+id/pointNumber" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/vouchersAvailableText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="24dp"
+        android:text="Vouchers Available"
+        android:textColor="#599659"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pointBox" />
+
+    <LinearLayout
+        android:id="@+id/voucherContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/vouchersAvailableText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="16dp" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

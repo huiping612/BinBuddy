@@ -1,0 +1,204 @@
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Top Navigation Toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/top_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="127dp"
+        android:background="@drawable/top_nav_background"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/top_nav_circle"
+            android:contentDescription="Back"
+            android:layout_gravity="start|center_vertical"
+            android:padding="8dp" />
+
+
+
+        <!-- Title -->
+        <TextView
+            android:id="@+id/top_toolbar_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Question"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Image -->
+    <ImageView
+        android:id="@+id/question_button"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_gravity="start|center_vertical"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="26dp"
+        android:contentDescription="Question"
+        android:padding="8dp"
+        android:src="@drawable/ic_question"
+        app:layout_constraintEnd_toEndOf="@+id/top_toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Background -->
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:layout_marginTop="127dp"
+        android:background="#ccf1cc"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_toolbar"></View>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="800dp"
+        android:layout_marginTop="127dp"
+        android:background="@drawable/bg_design"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/top_toolbar"></View>
+
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="337dp"
+        android:layout_height="414dp"
+        android:layout_marginTop="128dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/question_bg_white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_toolbar"></View>
+
+    <!--
+    <Button
+        android:id="@+id/submit_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="104dp"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="@color/dark_green"
+        android:text="Submit"
+        android:textColor="@android:color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/view"
+        app:layout_constraintEnd_toEndOf="parent" />
+    -->
+
+    <View
+        android:id="@+id/whitecircle"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="164dp"
+        android:background="@drawable/white_circle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_toolbar"></View>
+
+
+    <View
+        android:id="@+id/greencircle"
+        android:layout_width="65.4dp"
+        android:layout_height="65.4dp"
+        android:layout_marginStart="174dp"
+        android:layout_marginTop="86dp"
+        android:background="@drawable/round_green_shape"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_toolbar">
+
+    </View>
+
+    <TextView
+        android:id="@+id/onethree"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="187dp"
+        android:layout_marginTop="102dp"
+        android:textColor="#000000"
+        android:textSize="25sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/top_toolbar"
+        tools:text="3/3" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="328dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="40dp"
+        android:shadowColor="#33000000"
+        android:shadowDx="0"
+        android:shadowDy="4"
+        android:shadowRadius="4"
+        android:textColor="#445e44"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view"
+        tools:text="What is it called when manufacturers take trash and turn it into new products?" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="@color/darkGreen"
+        android:text="A. Composting"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="@color/darkGreen"
+        android:text="B. Recycling"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button1" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="@color/darkGreen"
+        android:text="C. Biodegrading"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button2" />
+
+    <Button
+        android:id="@+id/button4"
+        android:layout_width="280dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="64dp"
+        android:backgroundTint="@color/darkGreen"
+        android:text="D. Marketing"
+        android:textColor="@android:color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button3" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.point_collection.ProfileFragment">
+
+    <ImageButton
+        android:id="@+id/BtnBack"
+        android:layout_width="47dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_background2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/back_icon" />
+
+    <ImageView
+        android:id="@+id/userImage"
+        android:layout_width="116dp"
+        android:layout_height="126dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="80dp"
+        android:src="@mipmap/user_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/usernameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/userImage" />
+
+
+    <Button
+        android:id="@+id/rankingButton"
+        android:layout_width="203dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="#445E44"
+        android:text="-"
+        app:cornerRadius="150dp"
+        app:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#E9F0E0" />
+
+    <Button
+        android:id="@+id/viewRankingButton"
+        android:layout_width="203dp"
+        android:layout_height="102dp"
+        android:layout_marginStart="288dp"
+        android:layout_marginTop="132dp"
+        android:backgroundTint="#445E44"
+        android:text="-"
+        app:cornerRadius="150dp"
+        app:elevation="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="#E9F0E0" />
+
+    <TextView
+        android:id="@+id/placeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="98dp"
+        android:layout_marginEnd="24dp"
+        android:elevation="4dp"
+        android:text="Place"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/leaderboardButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="152dp"
+        android:layout_marginEnd="16dp"
+        android:elevation="4dp"
+        android:text="View \nRanking"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/rankingPlace2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="36dp"
+        android:elevation="4dp"
+        android:text="1"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:textColorLink="#FFFFFF"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/pointBox"
+        android:layout_width="308dp"
+        android:layout_height="139dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="230dp"
+        app:cardCornerRadius="35dp"
+        app:elevation="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/pointContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/rankingPlace"
+                android:layout_width="230dp"
+                android:layout_height="93dp"
+                android:layout_marginEnd="36dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/pointNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_marginStart="76dp"
+                android:layout_marginTop="16dp"
+                android:shadowColor="#8C050505"
+                android:shadowDx="1"
+                android:shadowDy="4"
+                android:shadowRadius="3"
+                android:text="1000"
+                android:textColor="#445E44"
+                android:gravity="center"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                app:layout_constraintStart_toStartOf="@+id/rankingPlace"
+                app:layout_constraintTop_toTopOf="@+id/rankingPlace" />
+
+            <TextView
+                android:id="@+id/pointText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="84dp"
+                android:layout_marginTop="8dp"
+                android:text="Points"
+                android:textAlignment="center"
+                android:textColor="#599659"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/rankingPlace"
+                app:layout_constraintTop_toBottomOf="@+id/pointNumber" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="309dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pointBox">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/voucherContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/rankingPlace4"
+                android:layout_width="257dp"
+                android:layout_height="118dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                android:text="1"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textColorLink="#FFFFFF"
+                android:textSize="60sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/redeemText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="44dp"
+                android:layout_marginTop="16dp"
+                android:text="Vouchers Available"
+                android:textAlignment="center"
+                android:textColor="#599659"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/rankingPlace4"
+                app:layout_constraintTop_toTopOf="@+id/rankingPlace4" />
+
+            <Button
+                android:id="@+id/redeemButton"
+                android:layout_width="140dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#E9F0E0"
+                android:shadowColor="#058C0505"
+                android:shadowDx="1"
+                android:shadowDy="4"
+                android:shadowRadius="15"
+                android:text="Redeem"
+                android:textColor="#445E44"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/rankingPlace4"
+                app:layout_constraintTop_toBottomOf="@+id/redeemText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView3"
+        android:layout_width="309dp"
+        android:layout_height="158dp"
+        android:layout_marginStart="48dp"
+        android:layout_marginTop="15dp"
+        app:cardCornerRadius="35dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/voucherRedeemedContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/redeemedText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="60dp"
+                android:layout_marginTop="40dp"
+                android:text="Vouchers Redeemed"
+                android:textAlignment="center"
+                android:textColor="#599659"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/voucherRedeemedContainer"
+                app:layout_constraintTop_toTopOf="@+id/voucherRedeemedContainer" />
+
+            <Button
+                android:id="@+id/viewButton"
+                android:layout_width="140dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="#E9F0E0"
+                android:shadowColor="#058C0505"
+                android:shadowDx="1"
+                android:shadowDy="4"
+                android:shadowRadius="15"
+                android:text="View"
+                android:textColor="#445E44"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="@+id/redeemedText"
+                app:layout_constraintTop_toBottomOf="@+id/redeemedText" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- ProgressBar to indicate loading -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <!-- Empty state text when no comments are available -->
+        <TextView
+            android:id="@+id/empty_state"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No comments available."
+            android:visibility="gone"
+            android:gravity="center"
+            android:layout_marginTop="16dp"
+            android:textColor="#666666"
+            android:textSize="14sp" />
+
+        <!-- RecyclerView to show comments -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comments_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <!-- Add Comment Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="79dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <!-- EditText for user to enter a comment -->
+
+            <EditText
+                android:id="@+id/comment_input"
+                android:layout_width="284dp"
+                android:layout_height="match_parent"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="8dp"
+                android:background="@drawable/rounded_edit_text"
+                android:hint="Add a comment..."
+                android:inputType="textMultiLine"
+                android:lines="3"
+                android:maxLines="5"
+                android:padding="10dp"
+                android:scrollbars="vertical" />
+
+            <ImageButton
+                android:id="@+id/BtnSubmitComment"
+                android:layout_width="wrap_content"
+                android:layout_height="68dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                android:background="@android:color/transparent"
+                android:cropToPadding="true"
+                app:srcCompat="@drawable/baseline_send_24" />
+
+            <!-- Button to submit the comment -->
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

@@ -1,0 +1,278 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.green_plaza.SellingPageFragment">
+
+    <!-- Your header and image layouts here -->
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/CLHomeHeader"
+        android:layout_width="409dp"
+        android:layout_height="249dp"
+        android:background="@drawable/selling_page_header"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ellipse99"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="416dp"
+            android:layout_height="195dp"
+            android:src="@drawable/ellipse100"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/BtnBack2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/button_background"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/back_icon" />
+
+        <TextView
+            android:id="@+id/TVPlazaHomeTitle2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/katibeh"
+            android:shadowColor="#000000"
+            android:shadowDx="1"
+            android:shadowDy="6"
+            android:shadowRadius="2"
+            android:text="Green Plaza"
+            android:textColor="#458244"
+            android:textSize="50sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/TVSellingHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/konkhmer_sleokchher"
+            android:text="Sell Item"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TVPlazaHomeTitle2" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ScrollView
+        android:layout_width="329dp"
+        android:layout_height="433dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CLHomeHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Category Field -->
+            <TextView
+                android:id="@+id/TVCategory"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/khula_light"
+                android:text="Category"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ETCategoryField"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edit_text"
+                android:ems="10"
+                android:hint="Enter product category"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textSize="11sp" />
+
+            <!-- Item Name Field -->
+            <TextView
+                android:id="@+id/TVItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/khula_light"
+                android:text="Name of the Item"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ETItemNameField"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edit_text"
+                android:ems="10"
+                android:hint="Enter product name"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/TVQuantity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/khula_light"
+                android:text="Quantity"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ETQuantityField"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edit_text"
+                android:ems="10"
+                android:hint="Enter item quantity"
+                android:inputType="number"
+                android:padding="16dp"
+                android:textSize="11sp" />
+
+            <!-- Other fields: Description, Quantity, Price -->
+
+            <TextView
+                android:id="@+id/TVPrice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/khula_light"
+                android:text="Price"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ETPriceField"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edit_text"
+                android:ems="10"
+                android:hint="Enter product price"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textSize="11sp" />
+            <!-- Item Description Field -->
+            <TextView
+                android:id="@+id/TVDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/khula_light"
+                android:text="Description"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ETDescriptionField"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/rounded_edit_text"
+                android:ems="10"
+                android:hint="Enter product description"
+                android:inputType="textMultiLine"
+                android:lines="4"
+                android:padding="16dp"
+                android:textSize="11sp" />
+
+            <TextView
+                android:id="@+id/TVLocation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/khula_light"
+                android:text="Location"
+                android:textSize="18sp" />
+
+            <EditText
+                android:id="@+id/ETLocationField"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/rounded_edit_text"
+                android:ems="10"
+                android:hint="Enter item location"
+                android:inputType="text"
+                android:padding="16dp"
+                android:textSize="11sp" />
+            <!-- Upload Photo Button -->
+
+            <TextView
+                android:id="@+id/TVUploadPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:fontFamily="@font/khula_light"
+                android:text="Upload Photo"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/BtnUploadPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:backgroundTint="#E9F0E0"
+                android:padding="10dp"
+                android:text="Upload Photo"
+                android:textColor="#ffffff"
+                android:textSize="16sp" />
+
+
+            <!-- Buttons: Submit and Cancel -->
+            <ImageView
+                android:id="@+id/ivItemImage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:visibility="gone"
+                android:contentDescription="Item Image"
+                android:scaleType="centerCrop" />
+
+
+            <LinearLayout
+                android:id="@+id/SubmitAction"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="50dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/BtnSubmit"
+                    android:layout_width="166dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#458244"
+                    android:paddingTop="6dp"
+                    android:text="Submit" />
+
+                <Button
+                    android:id="@+id/BtnCancel"
+                    android:layout_width="166dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:backgroundTint="#E9F0E0"
+                    android:paddingTop="6dp"
+                    android:text="Cancel" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

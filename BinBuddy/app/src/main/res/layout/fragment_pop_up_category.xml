@@ -1,0 +1,99 @@
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <!-- Background Overlay -->
+    <View
+        android:id="@+id/overlayBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#A6000000" /> <!-- Semi-transparent dark background -->
+
+    <!-- Content Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/categoryCard"
+        android:layout_width="374dp"
+        android:layout_height="468dp"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#445E44"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="361dp"
+            android:layout_height="match_parent"
+            android:padding="16dp">
+
+            <!-- Category Name -->
+
+            <!-- Category Icon -->
+
+            <!-- Replace with actual drawable -->
+
+            <!-- Button to Find Nearby Bin -->
+
+            <TextView
+                android:id="@+id/categoryTitle"
+                android:layout_width="123dp"
+                android:layout_height="49dp"
+                android:layout_marginTop="76dp"
+                android:layout_marginEnd="84dp"
+                android:text="Plastic"
+                android:textColor="#FFFFFF"
+                android:textSize="34sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/categoryIcon"
+                android:layout_width="94dp"
+                android:layout_height="89dp"
+                android:layout_marginTop="136dp"
+                android:layout_marginEnd="108dp"
+                android:contentDescription="bin_orange"
+                android:src="@drawable/bin_orange"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/findNearbyBinButton"
+                android:layout_width="290dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="36dp"
+                android:layout_marginBottom="136dp"
+                android:background="@drawable/rounded_button_background_white"
+                android:padding="12dp"
+                android:text="Find Nearby Bin"
+                android:textColor="#648A58"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/categoryImage"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginBottom="384dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/pop_up_plastic"
+        android:translationZ="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/categoryCard"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Image for Category -->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

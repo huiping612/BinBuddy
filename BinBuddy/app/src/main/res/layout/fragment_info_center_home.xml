@@ -1,0 +1,175 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFFF"
+    android:padding="16dp">
+
+    <!-- Top Navigation -->
+
+    <!-- Header Section -->
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="16dp"
+        android:backgroundTint="#445E44"
+        app:cardElevation="4dp"
+        app:cardCornerRadius="10dp">
+
+        <!-- Header Section -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CVSearchProduct"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#445E44"
+            app:cardCornerRadius="10dp"
+            app:cardElevation="4dp">
+
+            <ImageButton
+                android:id="@+id/BtnBack"
+                android:layout_width="64dp"
+                android:layout_height="45dp"
+                android:background="@drawable/button_background"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/back_icon" />
+            <!-- Recycling Bag Icon -->
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <ImageView
+                    android:id="@+id/plantIcon"
+                    android:layout_width="137dp"
+                    android:layout_height="173dp"
+                    android:layout_marginBottom="8dp"
+                    android:contentDescription="Recycling Bag"
+                    android:src="@drawable/recycle_bag"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/editTextText" />
+
+                <!-- Header Title -->
+                <TextView
+                    android:id="@+id/headerTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="25dp"
+                    android:text="Green Guide"
+                    android:textColor="#FFFFFF"
+                    android:textSize="30sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Subtext Description -->
+
+                <!-- Search Box -->
+
+                <TextView
+                    android:id="@+id/editTextText"
+                    android:layout_width="211dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Search for your item to discover the correct recycling bin"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/headerTitle" />
+
+                <EditText
+                    android:id="@+id/searchBox"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/rounded_search_box"
+                    android:editable="false"
+                    android:hint="Item name"
+                    android:padding="8dp"
+                    android:textColor="#FFFFFF"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/editTextText" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.cardview.widget.CardView>
+
+    <!-- Recycling Tips Section -->
+
+    <!-- Nearby Bin Station Section -->
+    <TextView
+        android:layout_width="179dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:fontFamily="@font/katibeh"
+        android:text="Recycling Tips"
+        android:textColor="#445E44"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/IVRecyclingTips"
+        android:layout_width="392dp"
+        android:layout_height="195dp"
+        android:layout_marginBottom="16dp"
+        android:contentDescription="Recycling Tips Image"
+        android:scaleType="fitCenter"
+        android:src="@drawable/recycling_image" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="8dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/katibeh"
+            android:text="Nearby Bin Station"
+            android:textColor="#445E44"
+            android:textSize="35sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LLNearbyRecycling"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/rounded_background_light_green"
+        android:orientation="vertical">
+
+        <!-- First Station -->
+
+        <ImageView
+            android:id="@+id/IVMap"
+            android:layout_width="359dp"
+            android:layout_height="100dp"
+            android:contentDescription="Map Thumbnail"
+            app:srcCompat="@drawable/map_thumbnail"
+            tools:srcCompat="@drawable/map_thumbnail" />
+
+        <!-- Second Station -->
+    </LinearLayout>
+
+
+    <!-- Bottom Navigation -->
+</LinearLayout>
